@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("moses", "andrew", "grace", 
+           "divyam", "khushi"),
+  github_username = c("Mosesweintraub", "andrewrightjames", "grxcetait", 
+                      "DivyamAneja", "khushiwadhwa0210"), 
+  colour = c("red", "blue", "lightgreen", 
+             "blue", "red"),
+  hobby = c("rowing", "rowing", "reading", 
+            "cricket", "annoyingpeople"),
+  favourite_number = c(9, 2, 1, 7, 2)
   )
 
 team_data
@@ -33,7 +33,7 @@ team_data
 
 ### Exercise 18
 
-We now work on visualising our data. 
+We now work on visualising our data.
 
 ```{r bar-plot}
 p1 <- ggplot(data = team_data, 
@@ -46,20 +46,19 @@ p1 <- ggplot(data = team_data,
 p1
 ```
 
-
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+It shows the favourite numbers and the usernames of each team member while also using their favourite colour as the indicator
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "github_username", 
+          y = "favourite_number",
+          title = "favourite_number_github_username")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+The code "labs()" allows the user to plot graphs and edit the axis and titles
 
 ### Exercise 20
 
@@ -69,4 +68,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+Too much data it will look too clustered
